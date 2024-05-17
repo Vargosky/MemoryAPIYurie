@@ -1,4 +1,4 @@
-const Mensaje = require("../models/mensaje"); // Requiere el modelo del mensaje
+const Mensaje = require("./mensaje"); // Requiere el modelo del mensaje
 
 // Función para guardar un mensaje en la base de datos
 async function guardarMensaje(
