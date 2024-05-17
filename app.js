@@ -1,0 +1,26 @@
+require("dotenv").config();
+const express = require("express");
+const app = express();
+const conectar = require("./db/conexion");
+
+const PORT = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+  res.send("¡Hola, postMortem!");
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
+  conectar(); // Asegúrate de llamar a la función de conexión
+});
+
+/*
+// Llamar a la función para establecer la conexión a la base de datos
+conectar()
+  .then(() => {
+    // Tu código aquí
+  })
+  .catch((error) => {
+    console.error("Error al conectar a la base de datos:", error);
+  });
+*/
